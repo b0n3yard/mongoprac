@@ -264,9 +264,10 @@ eval("// Create a simple path alias to allow browserify to resolve\n// the runti
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("const template = __webpack_require__(/*! ./index.hbs */ \"./src/index.hbs\")\r\nconst {prname} = __webpack_require__(/*! ./lib/tools */ \"./src/lib/tools.js\")\r\n\r\n\r\ntemplate({\r\n    name: 'JD',\r\n    color: 'red'\r\n})\r\n//prname('handlebars')\n\n//# sourceURL=webpack://client/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_tools__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/tools */ \"./src/lib/tools.js\");\nconst template = __webpack_require__(/*! ./index.hbs */ \"./src/index.hbs\")\r\n;\r\n// const {prname} = require('./lib/tools')\r\nconst  out = document.querySelector('#out')\r\n\r\n;(0,_lib_tools__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('hi there')\r\n\r\nout.innerHTML = 'hello'\r\ntemplate({\r\n    name: 'JD',\r\n    color: 'red'\r\n})\r\n//prname('handlebars')\n\n//# sourceURL=webpack://client/./src/index.js?");
 
 /***/ }),
 
@@ -274,9 +275,10 @@ eval("const template = __webpack_require__(/*! ./index.hbs */ \"./src/index.hbs\
 /*!**************************!*\
   !*** ./src/lib/tools.js ***!
   \**************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("function prname(name){\r\n    console.log(name)\r\n}\r\n\r\nmodule.exports = {prname}\n\n//# sourceURL=webpack://client/./src/lib/tools.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction prname(name){\r\n    console.log(name)\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prname);\n\n//# sourceURL=webpack://client/./src/lib/tools.js?");
 
 /***/ })
 
@@ -305,6 +307,35 @@ eval("function prname(name){\r\n    console.log(name)\r\n}\r\n\r\nmodule.exports
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	

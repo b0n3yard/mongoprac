@@ -1,18 +1,27 @@
-{{!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= titlevalue %></title>
+    <title>{{{titlevalue}}}</title>
 </head>
+
 <body>
-    <h1>coffee!</h1>
-    <p>?</p>
-    {{body}}
+    <header class="row justify-between align-center">
+        <a href="/"><h3>coffe page</h3></a>
+        <nav class=""> <a href="#">register </a>
+            <span>or </span>
+            <a href="#">login</a>
+        </nav>
+    </header>
+    {{!-- <h1>coffee!</h1>
+    <p>now it does</p> --}}
+    <article id="out"> </article>
+    <article id="out2"> </article>
+    
+    
     <!-- <script src="bundle.js"></script> -->
 </body>
-</html> --}}
-{{!-- <body> --}}
-    <h2>{{name}}</h2>
-    <p>{{color}}</p>
-{{!-- </body> --}}
+
+</html>

@@ -1,0 +1,13 @@
+<section class="shops">
+    <h1 class="text-center">our shops</h1>
+   {{#if shops}}
+    {{#each shops}}
+    <article class="shop">
+        <h3 >{{name}}</h3>
+        <p>location: {{location}}</p>
+    </article>
+    {{/each}}
+    {{else}}
+    <p>no shops found</p>
+   {{/if}}
+</section>

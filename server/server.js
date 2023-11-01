@@ -6,7 +6,7 @@ const PORT = process.env.port || 3333
 const db = require('./controllers/connections.js')
 require('dotenv').config()
 const path =  require('path')
-const myroutes= require(path.join(__dirname, 'controllers'))
+const myroutes= require( './controllers')
 // const shop_routes = require(path.join(__dirname, 'controllers/shop_routes'))
 // const coffee_routes = require(path.join(__dirname, 'controllers/coffee_routes'))
 
@@ -15,13 +15,8 @@ const app = express()
 app.use(express.json())
 // app.use('/', shop_routes)
 // app.use('/', coffee_routes)
-app.get('*' ,(cro,sro)=>{
-    sro.status(404).send({
-        message:'route not found',
-        error: 404
-    })
-    
-})
+
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave:false,
@@ -34,6 +29,14 @@ app.use(session({
     }
 }))
 app.use('/', myroutes)
+
+app.get('*' ,(cro,sro)=>{
+    sro.status(404).send({
+        message:'route not found',
+        error: 404
+    })
+    
+})
 db.on('open', ()=>{
     app.listen(PORT, () => {console.log(`started, listening on ${PORT}`); console.log('stop server by hitting ctrl + c')})
 })

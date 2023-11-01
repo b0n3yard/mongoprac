@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const {Coffee, Shop} = require('../models')
-router.get('/',async (cro,sro)=>{
+
+router.get('/shops',async (cro,sro)=>{
     const shops = await Shop.find({}).lean()
     console.log(shops)
  sro.send(shops)
