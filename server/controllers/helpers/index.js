@@ -23,7 +23,7 @@ async function isAuthenticated(cro,sto,next){
 }
 
 async function authenticate(cro,sro,next){
-    const user = User.findById(cro.session.user_id)
+    const user = await User.findById(cro.session.user_id)
     cro.user = user
 
     next()

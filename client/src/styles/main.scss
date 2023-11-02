@@ -29,6 +29,13 @@ body{
 .column{
     flex-direction: column;
 }
+form{
+    width:350px;
+    > *{
+        margin: 5px 0;
+        padding: 6px 10px;
+    }
+}
 //custom
 header{
     padding: 6px 3%;

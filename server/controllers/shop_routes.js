@@ -3,7 +3,7 @@ const {Coffee, Shop} = require('../models')
 
 router.get('/shops',async (cro,sro)=>{
     const shops = await Shop.find({}).lean()
-    console.log(shops)
+    // console.log(shops)
  sro.send(shops)
 })
  

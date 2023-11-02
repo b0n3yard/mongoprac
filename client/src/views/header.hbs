@@ -1,0 +1,12 @@
+ <a href="/"><h3>coffe page</h3></a>
+<nav>
+{{#if user}}
+<p>welcomw, {{user.username}}</p>
+<a href="/logout">log out</a>
+{{else}}
+
+<a href="#">register</a>
+<span>or</span>
+<a href="/login">login</a>
+{{/if}}
+</nav>
